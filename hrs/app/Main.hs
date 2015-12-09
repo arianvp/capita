@@ -7,8 +7,12 @@ import Control.Concurrent
 import Control.Exception
 import Control.Monad
 
+with s a = bracket s sClose  a
+
 main :: IO ()
-main = bracket (socket AF_INET Stream defaultProtocol) sClose listener
+-- open a socket, and make sure it's closed properly after we exit
+main = with (socket AF_INET Stream defaultProtocol) listener
+
 
 
 listener sock = do
@@ -17,8 +21,8 @@ listener sock = do
   bind sock (SockAddrInet 44444 addr)
   listen sock maxListenQueue
   forever $ do
-    (h,addr) <- accept sock
-    forkFinally (handleClient h) (\_ -> sClose h)
+    with (accept sock) $ \(h,addr) ->
+      forkFinally (handleClient h) (const . sClose $ h)
 
 
 handleClient h = loop 600 4
