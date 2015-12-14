@@ -1,0 +1,422 @@
+
+==================== FINAL INTERFACE ====================
+2015-12-14 13:01:27.589089 UTC
+
+interface main@main:Main 7102
+  interface hash: e557701ce085f1606e6007afac8decd9
+  ABI hash: 918c3599c9eff07e8a4ec9f7b36fe20b
+  export-list hash: 91391f34f6c0c1fe05c558a555284b19
+  orphan hash: aca2b3ef651466fbcc0e4f9e7418901c
+  flag hash: 2a4114e060654fbff5d91f844900a4e7
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.getURI
+  Main.main
+  Main.parseURIs
+  Main.sortURIsSTM
+module dependencies:
+package dependencies: HTTP-4000.2.21@HTTP_4BCgY4wvTQRDaAlvnlsvGi
+                      abstract-par-0.3.3@abstr_0mXTTcYXqAJ3jpj7PU0gDI
+                      array-0.5.1.0@array_E0sTtauuKsGDLZoT7lTbgZ
+                      async-2.0.2@async_J3wPtBMkDlC1zlPIsbgEk9 base-4.8.1.0
+                      binary-0.7.5.0@binar_IvYoLp9H6Xy3zEH13MmZwd
+                      bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH
+                      containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN
+                      deepseq-1.4.1.1@deeps_LbCWUlehDDeLxurARKDH5o ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0 monad-par-0.3.4.7@monad_HGYTgKBpAPv87lKvqFCdJP
+                      mtl-2.2.1@mtl_KMpng31YRYc5JfMWFZ3FCU
+                      network-2.6.2.1@netwo_F6mK9sCIw3M5SbZMt2lUQE
+                      network-uri-2.6.0.3@netwo_LFMzacKIfjmC6gRt5N3aSz
+                      parsec-3.1.9@parse_8fSmqig53hOL2SEu1k9Tv0
+                      stm-2.4.4@stm_C1kFMnPqFjvDhFjgMZGUpr
+                      text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh
+                      transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X
+orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
+         binary-0.7.5.0@binar_IvYoLp9H6Xy3zEH13MmZwd:Data.Binary.Generic
+         bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH:Data.ByteString.Builder
+         monad-par-0.3.4.7@monad_HGYTgKBpAPv87lKvqFCdJP:Control.Monad.Par.Scheds.Trace
+         network-2.6.2.1@netwo_F6mK9sCIw3M5SbZMt2lUQE:Network.Socket
+         network-2.6.2.1@netwo_F6mK9sCIw3M5SbZMt2lUQE:Network.Socket.Types
+         stm-2.4.4@stm_C1kFMnPqFjvDhFjgMZGUpr:Control.Monad.STM
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Lazy
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Show
+         transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X:Control.Monad.Trans.Error
+family instance modules: base-4.8.1.0:Control.Applicative
+                         base-4.8.1.0:Data.Either base-4.8.1.0:Data.Functor.Identity
+                         base-4.8.1.0:Data.Monoid base-4.8.1.0:Data.Type.Equality
+                         base-4.8.1.0:Data.Void base-4.8.1.0:GHC.Exts
+                         base-4.8.1.0:GHC.Generics
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.IntMap.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.IntSet.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Map.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Sequence
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Set.Base
+                         network-uri-2.6.0.3@netwo_LFMzacKIfjmC6gRt5N3aSz:Network.URI
+                         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text
+                         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Lazy
+import  -/  HTTP-4000.2.21@HTTP_4BCgY4wvTQRDaAlvnlsvGi:Network.HTTP e1ca9628ab986e6fa8f99a2051cf241f
+import  -/  HTTP-4000.2.21@HTTP_4BCgY4wvTQRDaAlvnlsvGi:Network.HTTP.Base e6067db7c8a67c9e79cd721f4f7470ba
+import  -/  HTTP-4000.2.21@HTTP_4BCgY4wvTQRDaAlvnlsvGi:Network.Stream 5093ccec3c9e75152b4e928edb5044b9
+import  -/  abstract-par-0.3.3@abstr_0mXTTcYXqAJ3jpj7PU0gDI:Control.Monad.Par.Class fcb0fb4afc41c80ac25602b4297e7bfd
+import  -/  async-2.0.2@async_J3wPtBMkDlC1zlPIsbgEk9:Control.Concurrent.Async a853b9f0df8688ff98899b360bee02e5
+import  -/  base-4.8.1.0:Control.Concurrent eedef4ce4eb0a2874a44a6b90863cce8
+import  -/  base-4.8.1.0:Control.Exception ad90805da5ad455017893997acf84ba2
+import  -/  base-4.8.1.0:Control.Exception.Base da2438b8a9b2933da5a60a968b3e3fac
+import  -/  base-4.8.1.0:Control.Monad dfea142d91349c4861427789d50d5b80
+import  -/  base-4.8.1.0:Data.Either bc9482e78cc431fce439b593377aa2e6
+import  -/  base-4.8.1.0:Data.Foldable 2e5acb797cfda6b3b7fabd7052abe290
+import  -/  base-4.8.1.0:Data.Monoid bd73caba6e77f9944cb89ef5bec300c6
+import  -/  base-4.8.1.0:Data.Traversable 89769555cf5e62f4edd3d085405c2caa
+import  -/  base-4.8.1.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.1.0:GHC.Conc.Sync 9e3836b2f1d1d028a49b374ef552faad
+import  -/  base-4.8.1.0:GHC.Exception 49d670c608baf8e437c7e0f453690e18
+import  -/  base-4.8.1.0:GHC.List f31ed8784b3e05f1397195751f7d74ea
+import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
+import  -/  base-4.8.1.0:System.Environment 946ddc2d7c48138bb213316abaff2a8d
+import  -/  base-4.8.1.0:System.IO d541b8bdf18c04de3ab7ea0277c4eba3
+import  -/  bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH:Data.ByteString 65bd6f108f33ac736977e12af3a12795
+import  -/  bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH:Data.ByteString.Internal bf4b7d23d1b8365e073bc2ac77444155
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  monad-par-0.3.4.7@monad_HGYTgKBpAPv87lKvqFCdJP:Control.Monad.Par.IO aa623f4450945d8dbf7d8c1540dc730b
+import  -/  network-uri-2.6.0.3@netwo_LFMzacKIfjmC6gRt5N3aSz:Network.URI a2fb0e27fab350081297c7eb74091942
+import  -/  stm-2.4.4@stm_C1kFMnPqFjvDhFjgMZGUpr:Control.Concurrent.STM 708e33e7870c01119f06b99cd40c1f6b
+import  -/  stm-2.4.4@stm_C1kFMnPqFjvDhFjgMZGUpr:Control.Concurrent.STM.TVar 45f03c7d1cc1e7e678b267baf6382d03
+import  -/  transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X:Control.Monad.IO.Class 9605d683dd45bfe8c9f8bdf894951b7c
+57f22848951fd2041f42d7d202b0eb3d
+  $s$fShow(,,)_$s$fShow(,,)_$cshow ::
+    (GHC.Types.Int, GHC.Types.Int, GHC.Types.Int) -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(1*U(U),U(U),U(U))>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Int) ->
+                 GHC.Show.$fShow(,,)_$cshowsPrec
+                   @ GHC.Types.Int
+                   @ GHC.Types.Int
+                   @ GHC.Types.Int
+                   GHC.Show.$fShowInt
+                   GHC.Show.$fShowInt
+                   GHC.Show.$fShowInt
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+ceeda910f2abd2172f335dbcbddba1a6
+  $smapM :: (a -> GHC.Base.Maybe b) -> [a] -> GHC.Base.Maybe [b]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ a @ b f :: a -> GHC.Base.Maybe b as :: [a] ->
+                 GHC.Base.foldr
+                   @ a
+                   @ (GHC.Base.Maybe [b])
+                   (\ a1 :: a r :: GHC.Base.Maybe [b][OneShot] ->
+                    GHC.Base.$fMonadMaybe_$c>>=
+                      @ b
+                      @ [b]
+                      (f a1)
+                      (\ x :: b[OneShot] ->
+                       GHC.Base.$fMonadMaybe_$c>>=
+                         @ [b]
+                         @ [b]
+                         r
+                         (\ xs :: [b][OneShot] ->
+                          GHC.Base.Just @ [b] (GHC.Types.: @ b x xs))))
+                   (GHC.Base.Just @ [b] (GHC.Types.[] @ b))
+                   as) -}
+434c113736544e2256e7153a84e07c6d
+  getURI ::
+    Control.Monad.IO.Class.MonadIO m =>
+    Network.URI.URI
+    -> m (Network.Stream.Result
+            (Network.HTTP.Base.Response Data.ByteString.Internal.ByteString))
+  {- Arity: 2, Strictness: <S(LC(S)),1*U(A,1*C1(U))><L,U(U,U,U,U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ (m :: * -> *)
+                   $dMonadIO :: Control.Monad.IO.Class.MonadIO m
+                   uri :: Network.URI.URI ->
+                 Control.Monad.IO.Class.liftIO
+                   @ m
+                   $dMonadIO
+                   @ (Network.Stream.Result
+                        (Network.HTTP.Base.Response Data.ByteString.Internal.ByteString))
+                   (Network.HTTP.simpleHTTP1
+                      @ Data.ByteString.Internal.ByteString
+                      Network.TCP.$fHStreamByteString0
+                      (Network.HTTP.Base.Request
+                         @ Data.ByteString.Internal.ByteString
+                         uri
+                         Network.HTTP.Base.GET
+                         (GHC.Types.[] @ Network.HTTP.Headers.Header)
+                         Data.ByteString.Internal.$fMonoidByteString_$cmempty))
+                     `cast`
+                   (Sym (GHC.Types.NTCo:IO[0]
+                             <Network.Stream.Result
+                                (Network.HTTP.Base.Response
+                                   Data.ByteString.Internal.ByteString)>_R))) -}
+0b3025704aed42d155c7db919908d9bd
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+a65072f157d64526d4ca71af75706e68
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case System.Environment.getArgs1 s of ds1 { (#,#) ipv ipv1 ->
+                 case Main.main_go ipv1 of wild {
+                   GHC.Base.Nothing
+                   -> GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main6
+                        GHC.Types.True
+                        ipv
+                   GHC.Base.Just urls
+                   -> case Main.main3 urls ipv of ds2 { (#,#) ipv2 ipv3 ->
+                      Main.main2 ipv3 ipv2 } } }) -}
+b1e00f51fed4a06fe64078426f9fda43
+  main2 ::
+    [Network.URI.URI]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,1*U><L,U> -}
+7784a47596c5d06f0b7fe52708dfa3b4
+  main3 ::
+    [Network.URI.URI]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [Network.URI.URI] #)
+  {- Arity: 2, Strictness: <L,1*U><L,U>,
+     Unfolding: (\ xs :: [Network.URI.URI]
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case GHC.Prim.newTVar#
+                        @ [Network.URI.URI]
+                        @ GHC.Prim.RealWorld
+                        (GHC.Types.[] @ Network.URI.URI)
+                        eta of ds { (#,#) ipv ipv1 ->
+                 letrec {
+                   a :: [Network.URI.URI]
+                        -> GHC.Prim.State# GHC.Prim.RealWorld
+                        -> (# GHC.Prim.State# GHC.Prim.RealWorld, [()] #)
+                     {- Arity: 2, Strictness: <S,1*U><L,U> -}
+                   = \ ds1 :: [Network.URI.URI]
+                       eta1 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                     case ds1 of wild {
+                       [] -> (# eta1, GHC.Types.[] @ () #)
+                       : y ys
+                       -> case Control.Concurrent.Async.$fAlternativeConcurrently7
+                                 @ ([()] -> [()])
+                                 @ [()]
+                                 @ ([()] -> [()], [()])
+                                 (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                                  case GHC.Prim.catch#
+                                         @ ()
+                                         @ GHC.Exception.SomeException
+                                         (\ s1 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                                          case Network.HTTP.simpleHTTP1
+                                                 @ Data.ByteString.Internal.ByteString
+                                                 Network.TCP.$fHStreamByteString0
+                                                 (Network.HTTP.Base.Request
+                                                    @ Data.ByteString.Internal.ByteString
+                                                    y
+                                                    Network.HTTP.Base.GET
+                                                    (GHC.Types.[] @ Network.HTTP.Headers.Header)
+                                                    Data.ByteString.Internal.$fMonoidByteString_$cmempty)
+                                                 s1 of ds2 { (#,#) ipv2 ipv3 ->
+                                          case ipv3 of wild1 {
+                                            Data.Either.Left ipv4
+                                            -> case Main.main5
+                                               ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                                               of {}
+                                            Data.Either.Right ds3
+                                            -> case ds3 of wild2 { Network.HTTP.Base.Response e ds4 ds5 ds6 ->
+                                               case GHC.IO.Handle.Text.hPutStr2
+                                                      GHC.IO.Handle.FD.stdout
+                                                      (Main.$s$fShow(,,)_$s$fShow(,,)_$cshow e)
+                                                      GHC.Types.True
+                                                      ipv2 of ds7 { (#,#) ipv4 ipv5 ->
+                                               case e of ww { (,,) ww1 ww2 ww3 ->
+                                               case ww1 of wild3 { GHC.Types.I# x# ->
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.<# x# 4) of wild4 {
+                                                 GHC.Types.False
+                                                 -> case x# of wild5 {
+                                                      DEFAULT -> (# ipv4, GHC.Tuple.() #)
+                                                      4
+                                                      -> case ww2 of wild6 { GHC.Types.I# x#1 ->
+                                                         case GHC.Prim.tagToEnum#
+                                                                @ GHC.Types.Bool
+                                                                (GHC.Prim.<# x#1 0) of wild7 {
+                                                           GHC.Types.False
+                                                           -> case x#1 of wild8 {
+                                                                DEFAULT -> (# ipv4, GHC.Tuple.() #)
+                                                                0
+                                                                -> case ww3 of wild9 { GHC.Types.I# x ->
+                                                                   case GHC.Prim.tagToEnum#
+                                                                          @ GHC.Types.Bool
+                                                                          (GHC.Prim.<#
+                                                                             x
+                                                                             0) of wild10 {
+                                                                     GHC.Types.False
+                                                                     -> (# ipv4, GHC.Tuple.() #)
+                                                                     GHC.Types.True
+                                                                     -> GHC.Prim.atomically#
+                                                                          @ ()
+                                                                          (\ eta2 :: GHC.Prim.State#
+                                                                                       GHC.Prim.RealWorld[OneShot] ->
+                                                                           case GHC.Prim.readTVar#
+                                                                                  @ GHC.Prim.RealWorld
+                                                                                  @ [Network.URI.URI]
+                                                                                  ipv1
+                                                                                  eta2 of ds8 { (#,#) ipv6 ipv7 ->
+                                                                           case GHC.Prim.writeTVar#
+                                                                                  @ GHC.Prim.RealWorld
+                                                                                  @ [Network.URI.URI]
+                                                                                  ipv1
+                                                                                  (GHC.Types.:
+                                                                                     @ Network.URI.URI
+                                                                                     y
+                                                                                     ipv7)
+                                                                                  ipv6 of s2# { DEFAULT ->
+                                                                           (# s2#,
+                                                                              GHC.Tuple.() #) } })
+                                                                          ipv4 } } }
+                                                           GHC.Types.True
+                                                           -> GHC.Prim.atomically#
+                                                                @ ()
+                                                                (\ eta2 :: GHC.Prim.State#
+                                                                             GHC.Prim.RealWorld[OneShot] ->
+                                                                 case GHC.Prim.readTVar#
+                                                                        @ GHC.Prim.RealWorld
+                                                                        @ [Network.URI.URI]
+                                                                        ipv1
+                                                                        eta2 of ds8 { (#,#) ipv6 ipv7 ->
+                                                                 case GHC.Prim.writeTVar#
+                                                                        @ GHC.Prim.RealWorld
+                                                                        @ [Network.URI.URI]
+                                                                        ipv1
+                                                                        (GHC.Types.:
+                                                                           @ Network.URI.URI
+                                                                           y
+                                                                           ipv7)
+                                                                        ipv6 of s2# { DEFAULT ->
+                                                                 (# s2#, GHC.Tuple.() #) } })
+                                                                ipv4 } } }
+                                                 GHC.Types.True
+                                                 -> GHC.Prim.atomically#
+                                                      @ ()
+                                                      (\ eta2 :: GHC.Prim.State#
+                                                                   GHC.Prim.RealWorld[OneShot] ->
+                                                       case GHC.Prim.readTVar#
+                                                              @ GHC.Prim.RealWorld
+                                                              @ [Network.URI.URI]
+                                                              ipv1
+                                                              eta2 of ds8 { (#,#) ipv6 ipv7 ->
+                                                       case GHC.Prim.writeTVar#
+                                                              @ GHC.Prim.RealWorld
+                                                              @ [Network.URI.URI]
+                                                              ipv1
+                                                              (GHC.Types.: @ Network.URI.URI y ipv7)
+                                                              ipv6 of s2# { DEFAULT ->
+                                                       (# s2#, GHC.Tuple.() #) } })
+                                                      ipv4 } } } } } } })
+                                         Main.main4
+                                         s of ds2 { (#,#) ipv2 ipv3 ->
+                                  (# ipv2, GHC.Types.: @ () ipv3 #) })
+                                   `cast`
+                                 (Sym (GHC.Types.NTCo:IO[0] <[()] -> [()]>_R))
+                                 (a ys) `cast` (Sym (GHC.Types.NTCo:IO[0] <[()]>_R))
+                                 (Control.Concurrent.Async.$fAlternativeConcurrently5
+                                    @ ([()] -> [()])
+                                    @ [()])
+                                   `cast`
+                                 (<GHC.MVar.MVar
+                                     (Data.Either.Either
+                                        GHC.Exception.SomeException
+                                        (Data.Either.Either ([()] -> [()]) [()]))>_R
+                                  ->_R Sym (GHC.Types.NTCo:IO[0] <([()] -> [()], [()])>_R))
+                                 eta1 of ds2 { (#,#) ipv2 ipv3 ->
+                          (# ipv2,
+                             Control.Concurrent.Async.$fAlternativeConcurrently4
+                               @ [()]
+                               @ [()]
+                               ipv3 #) } }
+                 } in
+                 case a xs ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 case GHC.Prim.readTVarIO#
+                        @ GHC.Prim.RealWorld
+                        @ [Network.URI.URI]
+                        ipv1
+                        ipv2 of ds2 { (#,#) ipv4 ipv5 ->
+                 (# ipv4, GHC.List.reverse @ Network.URI.URI ipv5 #) } } }) -}
+9e1d3c487e3ca893631f7410ea9c03f6
+  main4 ::
+    GHC.Exception.SomeException
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, HasNoCafRefs,
+     Unfolding: (\ e1 :: GHC.Exception.SomeException[OneShot]
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case e1 of wild { GHC.Exception.SomeException e $dException e2 ->
+                 (# eta, GHC.Tuple.() #) }) -}
+8557e3c87c0bf7a4d1695d7a2d0cd28f
+  main5 :: GHC.Types.IO ()
+  {- Strictness: b -}
+80af9ad3ef5b05f02313b86afec2db72
+  main6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "WTF Error"#) -}
+f66fafadf11b001898eca39f3a7aa479
+  main7 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+3e8ace3a46eaa89430e472c1be5a8551
+  main_go :: [[GHC.Types.Char]] -> GHC.Base.Maybe [Network.URI.URI]
+  {- Arity: 1, Strictness: <S,1*U> -}
+417505cf248fb51b27733aace1acebb8
+  parseURIs :: [GHC.Base.String] -> GHC.Base.Maybe [Network.URI.URI]
+  {- Arity: 1,
+     Unfolding: (Main.$smapM
+                   @ [GHC.Types.Char]
+                   @ Network.URI.URI
+                   Network.URI.parseURI) -}
+4af263b19f523dd62e281d3bb0b5d0f4
+  sortURIsSTM :: [Network.URI.URI] -> GHC.Types.IO [Network.URI.URI]
+  {- Arity: 2, Strictness: <L,1*U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main3
+                  `cast`
+                (<[Network.URI.URI]>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <[Network.URI.URI]>_R)) -}
+"SPEC/Main $fShow(,,)_$cshow @ Int @ Int @ Int" [ALWAYS] forall $dShow :: GHC.Show.Show
+                                                                            GHC.Types.Int
+                                                                $dShow1 :: GHC.Show.Show
+                                                                             GHC.Types.Int
+                                                                $dShow2 :: GHC.Show.Show
+                                                                             GHC.Types.Int
+  GHC.Show.$fShow(,,)_$cshow @ GHC.Types.Int
+                             @ GHC.Types.Int
+                             @ GHC.Types.Int
+                             $dShow
+                             $dShow1
+                             $dShow2
+  = Main.$s$fShow(,,)_$s$fShow(,,)_$cshow
+"SPEC/Main mapM _ @ Maybe _" [ALWAYS] forall @ a
+                                             @ b
+                                             $dMonad :: GHC.Base.Monad GHC.Base.Maybe
+  GHC.Base.mapM @ a @ GHC.Base.Maybe @ b $dMonad
+  = Main.$smapM @ a @ b
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
